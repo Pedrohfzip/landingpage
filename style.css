@@ -10,7 +10,7 @@ borda branca headerContent
 * {
   margin: 0;
   padding: 0;
-  font-family: "Staatliches", cursive;
+  font-family: "Marcellus", serif;
 }
 a {
   text-decoration: none;
@@ -70,6 +70,8 @@ body {
 }
 
 /* FIM HeaderInfos */
+
+/* header Product Content */
 
 #headerProductContent #colContent,
 #colContentImg {
@@ -137,7 +139,40 @@ s {
   width: 100%;
   height: 30rem;
 }
+/* Fim header Product Content */
 
+/* Estratégias */
+#colEstrategias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#divListaEstrategias .card h3 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+#divListaEstrategias .card p {
+  font-family: "Crimson Text", serif;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+#divListaEstrategias ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+}
+#divListaEstrategias ul li {
+  display: flex;
+  justify-content: space-evenly;
+}
+#divListaEstrategias ul h1 {
+  font-size: 2.9rem;
+  text-align: center;
+}
+/* Fim Estratégias */
 @media only screen and (max-width: 750px) {
   /* headerInfos */
   #rowHeaderInfo {
@@ -181,4 +216,8 @@ s {
     height: 20rem;
   }
   /* FIM headerProductContent */
+
+  #divListaEstrategias .card {
+    width: 15rem;
+  }
 }
