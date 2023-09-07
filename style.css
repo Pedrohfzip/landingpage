@@ -7,10 +7,17 @@ Borda amarela headerInfos
 borda branca headerContent
 
 */
+
+@font-face{ 
+  /*Caso a fonte esteja dentro de uma pasta*/
+   src: url("./fontes/eyesome-regular.otf");
+   font-family: Eyesome;
+}
 * {
   margin: 0;
   padding: 0;
   font-family: "Marcellus", serif;
+  
 }
 a {
   text-decoration: none;
@@ -21,39 +28,53 @@ body {
   height: 100%;
   width: 100%;
   background-color: black;
-  border: 1px solid rgb(47, 0, 255);
+  /* border: 1px solid rgb(47, 0, 255); */
+  background-image: url('./img/fundo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* HeaderInfos */
 #headerInfos {
-  border: 1px solid rgb(72, 255, 0);
+  display:flex;
+  /* border: 1px solid rgb(72, 255, 0); */
+}
+#rowHeaderInfo{
+  display: flex;
+  align-items: center;
 }
 #infos {
+  height: 100%;
+  
   margin-left: 0px;
 }
 #logo {
+  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#logo img {
-  width: 15rem;
+#logo img{
+  border-radius: 50%;
 }
 #headerInfos #infos {
-  height: 4rem;
-  margin: 0;
-}
-#listaInfos li {
-  display: flex;
-  align-items: center;
+  height: 100%;
+  display:flex;
+
 }
 #listaInfos {
+  width: 100%;
   margin: 0;
-  justify-content: space-around;
   display: flex;
-  height: 100%;
+  justify-content: right;
   align-items: center;
 }
+#listaInfos li {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
 
 #listaInfos li a {
   cursor: pointer;
@@ -61,37 +82,45 @@ body {
   padding: 0 20px;
   position: relative;
   border-radius: 10px;
+  position: relative;
 }
 #listaInfos li a:hover {
   background-color: rgb(255, 255, 255);
-  top: -5px;
-  border-bottom: 5px;
+  /* top: -5px; */
+  /* border-bottom: 5px; */
+  border-bottom: 1px solid black;
   color: black;
 }
 
 /* FIM HeaderInfos */
 
 /* header Product Content */
+#sucesso{
+  color: rgb(226,170,68);
+  font-family: Eyesome;
+}
 
 #headerProductContent #colContent,
 #colContentImg {
-  border: 1px solid rgb(230, 223, 223);
+  /* border: 1px solid rgb(230, 223, 223); */
 }
 
 #colContent {
   margin-top: 3rem;
   display: flex;
   align-items: center;
-}
+  /* background: linear-gradient(60deg, black,#5A5A5A ); */
+ }
 
 #colContent h1 {
   font-size: 5.7vw;
   text-align: left;
   /* background-color: rgb(228, 228, 228); */
   padding: 5px 5px 0px 5px;
+  font-family: Eyesome;
 }
 #colContent h1 i {
-  color: white;
+  color: black;
 }
 #colContent h1 #ph1 {
   text-align: left;
@@ -100,8 +129,9 @@ body {
 }
 #colContent p {
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: rgb(170, 165, 165);
+  font-weight: bold;
 }
 #colContent #precopromocao {
   font-size: 1.3rem;
@@ -121,6 +151,7 @@ s {
   border-radius: 12px;
   cursor: pointer;
   justify-content: center;
+  border: 2px solid black;
 }
 #btnComprar a {
   font-size: 2rem;
@@ -143,9 +174,6 @@ s {
 
 /* Estratégias */
 #colEstrategias {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 #divListaEstrategias .card h3 {
@@ -159,9 +187,9 @@ s {
 }
 
 #divListaEstrategias ul {
-  display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  display:flex;
+  flex-wrap:wrap;
   list-style: none;
 }
 #divListaEstrategias ul li {
