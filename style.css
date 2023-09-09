@@ -29,7 +29,7 @@ body {
   width: 100%;
   background-color: black;
   /* border: 1px solid rgb(47, 0, 255); */
-  background-image: url('./img/fundo.jpg');
+  background-image: url('./img/fundo.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,7 +45,6 @@ body {
 }
 #infos {
   height: 100%;
-  
   margin-left: 0px;
 }
 #logo {
@@ -96,8 +95,13 @@ body {
 
 /* header Product Content */
 #sucesso{
-  color: rgb(226,170,68);
+  color: black;
+  padding: .5rem;
   font-family: Eyesome;
+  border-radius: 10px;
+  font-weight: bold;
+  background: #B48E69;
+  font-size: 6rem;
 }
 
 #headerProductContent #colContent,
@@ -113,6 +117,7 @@ body {
  }
 
 #colContent h1 {
+  padding: 15px;
   font-size: 5.7vw;
   text-align: left;
   /* background-color: rgb(228, 228, 228); */
@@ -164,42 +169,65 @@ s {
 
 #colContentImg {
   display: flex;
+  justify-content:center;
   align-items: center;
 }
 #colContentImg img {
-  width: 100%;
-  height: 30rem;
+  background: transparent;
+  width: 50rem;
 }
 /* Fim header Product Content */
 
 /* Estratégias */
-#colEstrategias {
+#estrategias {
+ display:flex;
+ flex-wrap: wrap;
 }
-
-#divListaEstrategias .card h3 {
-  font-size: 1.8rem;
-  text-align: center;
+#estrategias  h1{
+  
+  font-size: 4rem;
 }
-#divListaEstrategias .card p {
-  font-family: "Crimson Text", serif;
-  font-size: 0.8rem;
-  text-align: left;
-}
-
-#divListaEstrategias ul {
-  justify-content: space-evenly;
-  display:flex;
-  flex-wrap:wrap;
+#estrategias  ul{
+  width:100%;
+  height: 100%;
   list-style: none;
 }
-#divListaEstrategias ul li {
+#estrategias  ul li{
+  width: 100%;
+  margin-left: 0.2rem;
+}
+#estrategias  ul li h4{
+  border: 2px solid black;
+  background: #B48E69;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+#estrategias p{
+  font-weight: bold;
+}
+#estrategias #precopromocao{
+  font-size: 1.5rem;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  background: #B48E69;
+  
+}
+#sobre{
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+ }
+#sobre #img{
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
-#divListaEstrategias ul h1 {
-  font-size: 2.9rem;
-  text-align: center;
+#sobre img{
+  width: 20rem;
+  border-radius: 50%; 
 }
+
+
 /* Fim Estratégias */
 @media only screen and (max-width: 750px) {
   /* headerInfos */
@@ -209,6 +237,10 @@ s {
   }
   #infos {
     width: 100%;
+
+  }
+  #listaInfos{
+    justify-content: center;
   }
   #logo {
     width: 100%;
@@ -241,11 +273,68 @@ s {
   }
 
   #colContentImg img {
-    height: 20rem;
+    width: 50rem;
   }
   /* FIM headerProductContent */
 
   #divListaEstrategias .card {
     width: 15rem;
+  }
+
+
+  #estrategias div{
+    width:100%;
+  }
+
+
+  #sobre div{
+    width:100%;
+  }
+
+  #sobre img{
+    width: 10rem;
+    border-radius: 50%; 
+  }
+
+}
+
+@media only screen and (max-width: 1150px) {
+  #sobre img{
+    width: 15rem;
+    border-radius: 50%; 
+  }
+  #colContentImg img {
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #sobre img{
+    width: 15rem;
+    border-radius: 50%; 
+  }
+  #colContentImg img {
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 995px){
+  #estrategias  h1{
+  
+    font-size: 3rem;
+  }
+  #btnComprar{
+    margin-bottom: .5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  
+}
+@media only screen and (max-width: 450px){
+  #sobre img{
+    width: 15rem;
+    border-radius: 50%; 
+  }
+  #colContentImg img {
+    width: 20rem;
   }
 }
